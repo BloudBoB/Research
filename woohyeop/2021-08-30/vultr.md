@@ -1,4 +1,4 @@
-# 8.30
+# vultr
 
 Virtual Private Server(VPS)
 
@@ -19,11 +19,11 @@ vultr 2014년 출범
 - Compute: 가장 기본 인스턴스
 - High Frequency Compute: 더 좋은 CPU와 SSD를 제공하는 인스턴스
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled.png)
 
 클라우드 기초 - 정승기
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%201.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%201.png)
 
 [https://www.ciokorea.com/news/35402](https://www.ciokorea.com/news/35402)
 
@@ -60,11 +60,11 @@ Create new empty filesystem:
 
 Object Storage는 필요에 따라 확장 가능한 스토리지를 추가하고 S3 API를 통해 관리할 수 있는 스토리지 서비스이다.
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%202.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%202.png)
 
 이처럼, 한 개의 Object Storage 안에 여러 개의 버킷을 둘 수 있으며, 해당 버킷에 파일/폴더 업로드가 가능하다. API로도 당연히 접근 가능하지만, **s3cmd CLI tool**로도 접근이 가능하다. 
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%203.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%203.png)
 
 s3cmd를 통해서, 버킷에 public하게 사진을 올림
 
@@ -74,9 +74,9 @@ https://ewr1.vultrobjects.com/brwook1
 
 https://brwook1.ewr1.vultrobjects.com
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%204.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%204.png)
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%205.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%205.png)
 
 그 외에는 Cyberduck GUI tool로도 가능하다고 하고, 언어 중에서는 Python, Go, php가 가능하다는데, php 시도하다가 도메인이 없어서 삽질 조금 하다가 못했다.
 
@@ -86,7 +86,7 @@ https://brwook1.ewr1.vultrobjects.com
 
 Group Rules로 인바운드 규칙을 설정할 수 있다. 아래는 IPv4에서 SSH와 HTTP를 허용한 상태이다.
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%206.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%206.png)
 
 Network
 
@@ -98,7 +98,7 @@ Kubernetes
 
 # API
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%207.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%207.png)
 
 [https://www.vultr.com/resources/developers/](https://www.vultr.com/resources/developers/)
 
@@ -106,17 +106,17 @@ Kubernetes
 
 특정 Account의 Vultr Token을 가지고 있을 때, HTTP 접근을 통해서, Vultr의 기능을 통제할 수 있도록 만들어 놓은 API이다. 그런데, 보기 불편하다.
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%208.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%208.png)
 
 위는 인스턴스들을 리스팅한 모습이다. aws cli처럼, 권한만 있다면, [모든 서비스](https://www.vultr.com/api/)에 대해 접근하여 수정할 수 있다. 그러나, API access는 불가능한 것이 default이고, 이를 허용해도 아래처럼 API Token을 이용 가능한 사용자의 IP를 등록해줄 수 있다.
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%209.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%209.png)
 
 1. **Metadata API**
 
 AWS의 instance metadata service처럼, Vultr도 같은 주소에 metadata API를 만들어 놓았다. 이는 해당 인스턴스에 대한 정보를 쿼리할 수 있는 API이고, 그 응답으로 정보를 제공한다.
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2010.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2010.png)
 
 [http://158.247.205.131/woo.php](http://158.247.205.131/woo.php)
 
@@ -126,7 +126,7 @@ AWS의 instance metadata service처럼, Vultr도 같은 주소에 metadata API�
 
 Vultr API v2보다 훨씬 쓰기 편하다. 가독성도 좋고, AWS CLI에 가장 가까우면서도, vultr 특유의 구성때문인지 더 보기 편한 거 같기도
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2011.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2011.png)
 
 1. Terraform
 2. Packer
@@ -135,7 +135,7 @@ Vultr API v2보다 훨씬 쓰기 편하다. 가독성도 좋고, AWS CLI에 가�
 
 # Account
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2012.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2012.png)
 
 1. Profile: 프로필 정보 바꾸는 곳
 2. Preference: Light/Dark 모드 지정하는 곳
@@ -144,7 +144,7 @@ Vultr API v2보다 훨씬 쓰기 편하다. 가독성도 좋고, AWS CLI에 가�
 5. **API**: Vultr API v2에서 봤던 것과 같다. API 토큰을 만들고, 접근 가능한 아이피 지정이 가능하다.
 6. **Users**
 
-![Untitled](8%2030%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2013.png)
+![Untitled](vultr%20df6a61ee2a8642a8933244a0454f01a3/Untitled%2013.png)
 
 AWS에서는 User, Group, Role 그리고 그에 붙은 Policy까지. 권한을 설정해주는 벡터가 다양했지만, 여기서는 한 User에다가 어떤 권한들을 설정해줄지 지정하고 이를 만들어 준다.
 
