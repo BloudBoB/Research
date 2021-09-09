@@ -1,0 +1,9 @@
+#!/var/lang/bin/python3.7
+"""
+Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+"""
+
+from bootstrap import main
+
+if __name__ == '__main__':
+    main()
