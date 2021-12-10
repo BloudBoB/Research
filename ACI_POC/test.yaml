@@ -1,0 +1,21 @@
+apiVersion: 2019-12-01
+location: koreacentral
+name: pocContainergroup
+properties:
+  osType: linux
+  containers:
+  - name: c1
+    properties:
+      image: runjivu/hubrepo:5736
+      resources:
+        requests:
+          cpu: 2
+          memoryInGb: 6
+      volumeMounts:
+      - name: test
+        mountPath: /test
+        readOnly: 0
+  volumes:
+  - name: test
+    gitRepo:
+      repository: https://github.com/BloudBoB/Research.git
